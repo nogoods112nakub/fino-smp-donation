@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinoSMP - Donate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <nav class="navbar">
+        <div class="nav-brand">FinoSMP</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#support">Support</a>
+        </div>
+    </nav>
+
+    <main>
+        <header id="home" class="hero">
+            <div class="hero-content">
+                <div class="badge">Support FinoSMP</div>
+                <h1>Help Us <span class="gradient-text">Keep Growing</span></h1>
+                <p>Your donations help us maintain servers, add new features, and keep FinoSMP free for everyone. No ranks, no strings attached — any amount is appreciated.</p>
+                <button class="donate-btn hero-btn" onclick="donate()">Donate Now</button>
+            </div>
+        </header>
+
+        <section id="support" class="section">
+            <h2 class="section-title">Support the <span class="gradient-text">Server</span></h2>
+            <p class="section-subtitle">Your contribution goes directly to keeping FinoSMP running</p>
+
+            <div class="perks-grid">
+                <div class="perk-card">
+                    <div class="perk-icon">&#128421;</div>
+                    <h4>Server Costs</h4>
+                    <p>Keeping the server online 24/7 with high performance</p>
+                </div>
+                <div class="perk-card">
+                    <div class="perk-icon">&#127912;</div>
+                    <h4>New Content</h4>
+                    <p>Building new maps, events, and game modes</p>
+                </div>
+                <div class="perk-card">
+                    <div class="perk-icon">&#128737;</div>
+                    <h4>Anti-Cheat</h4>
+                    <p>Advanced protection to keep the server fair</p>
+                </div>
+                <div class="perk-card">
+                    <div class="perk-icon">&#129309;</div>
+                    <h4>Community</h4>
+                    <p>Prizes for tournaments, giveaways, and events</p>
+                </div>
+            </div>
+
+            <div class="donate-cta">
+                <h3>Ready to donate?</h3>
+                <p>Scan the QR code with TrueMoney or enter your preferred amount.</p>
+                <button class="donate-btn cta-btn" onclick="donate()">Donate Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">FinoSMP</div>
+        <div class="footer-links">
+            <a href="#">Discord</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 FinoSMP. All rights reserved.</p>
+    </footer>
+
+    <div class="modal-overlay" id="donateModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>Donate to FinoSMP</h2>
+            <p class="modal-note">Thank you for supporting the server!</p>
+            <form class="donate-form" onsubmit="submitDonation(event)">
+                <div class="amount-field">
+                    <label for="amount">Amount (THB)</label>
+                    <input type="number" id="amount" min="1" placeholder="Enter amount" required>
+                </div>
+                <div class="payment-info">
+                    <label>Scan QR to pay via TrueMoney</label>
+                    <div class="qr-box">
+                        <img src="ReceiveMoney_QR_2026-09-05_00.05.34.png" alt="TrueMoney QR" class="qr-image">
+                        <p class="qr-hint">Scan this QR code with your TrueMoney app</p>
+                    </div>
+                </div>
+                <button type="submit" class="donate-btn submit-btn">I've Completed Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
